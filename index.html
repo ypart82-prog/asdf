@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Durga Puja - 2025 (BD)</title>
+<meta name="description" content="React-এর মতো প্রিমিয়াম ডিজাইন, কিন্তু স্ট্যাটিক HTML/CSS/JS। একটি পেজেই ইতিহাস, ইভেন্ট, গ্যালারি, ডোনেশন ও যোগাযোগ।">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@600;800&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#/home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>সার্বজনীন শ্রী শ্রী শারদীয়া দুর্গাপুজা-১৪৩২ খ্রিঃ</span>
+    </a>
+    <nav class="main-nav" aria-label="প্রধান ন্যাভিগেশন">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu">মেনু</button>
+      <ul id="menu" class="menu">
+        <li><a data-link href="#/home">হোম</a></li>
+        <li><a data-link href="#/about">ইতিহাস</a></li>
+        <li><a data-link href="#/events">সূচি</a></li>
+        <li><a data-link href="#/gallery">গ্যালারি</a></li>
+        <li><a data-link href="#/donate">ডোনেশন</a></li>
+        <li><a data-link href="#/contact">যোগাযোগ</a></li>
+        <li><button id="themeToggle" class="btn btn-ghost" aria-label="থিম টগল">🌓</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="app" tabindex="-1">
+  
+<section class="route hero" data-route="/home">
+  <div class="glow"></div>
+  <div class="container hero-inner motion-fade-up">
+    <div class="hero-copy">
+      <span class="badge">শারদীয় দুর্গোৎসব ২০২৫</span>
+      <h1>শুভ বিজয়া — <span class="badge">১৪৩২ খ্রিঃ</span> </h1>
+      <p>স্থান :- ঘোষকাঠী ট্যেকনিক্যাল কলেজ সংরগ্ন, নাজিরপুর, পিরোজপুর ।</p>
+      <div class="cta-group">
+        <a class="btn btn-primary" data-link href="#/events">ইভেন্ট সূচি</a>
+        <a class="btn" data-link href="#/donate">ডোনেট করুন</a>
+      </div>
+      <div class="card info" style="margin-top:16px;max-width:560px">
+        <div class="card-body">
+          <strong>পরবর্তী অনুষ্ঠান:</strong> <span id="next-event-label">লোড হচ্ছে…</span>
+          <span id="next-event-countdown" class="badge"></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-media motion-zoom-in">
+      <img src="assets/logo.png" alt="দুর্গোৎসবের প্রতীকী লোগো" width="320" height="320" loading="eager">
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2 class="section-title">এই বছরে কী কী?</h2>
+    <div class="cards">
+      <a class="card-link motion-fade-up" data-link href="#/about"><h3>ইতিহাস ও উদ্দেশ্য</h3><p class="muted">ঐতিহ্য, লক্ষ্য, কমিটি</p></a>
+      <a class="card-link motion-fade-up" data-link href="#/events"><h3>ইভেন্ট সূচি</h3><p class="muted">মহালয়া—বিজয়া দশমী</p></a>
+      <a class="card-link motion-fade-up" data-link href="#/gallery"><h3>ফটো গ্যালারি</h3><p class="muted">গত বছরের ঝলক</p></a>
+      <a class="card-link motion-fade-up" data-link href="#/donate"><h3>ডোনেশন</h3><p class="muted">bKash/Nagad</p></a>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2 class="section-title">ঘোষণা ও আপডেট</h2>
+    <ul class="updates motion-fade-up">
+      <li>স্বেচ্ছাসেবক নিবন্ধন—<a data-link href="#/contact">ফর্ম পূরণ করুন</a></li>
+      <li>আলপনা প্রতিযোগিতা—শেষ তারিখ: ২০ সেপ্টেম্বর ২০২৫</li>
+      <li>বিজয়া সংবর্ধনা: সিন্দুর খেলা ২ অক্টোবর ২০২৫ সকাল 11:00 AM</li>
+    </ul>
+  </div>
+</section>
+
+  
+<section class="route container section" data-route="/about" hidden>
+  <h1 class="page-title">পূজার ইতিহাস</h1>
+  <div class="card motion-fade-up"><div class="card-body">
+    আমাদের পাড়ায় শারদীয় দুর্গোৎসবের সূচনা হয়েছিল বহু বছর আগে। প্রতিবছর শিল্প, সংস্কৃতি, ভক্তি ও সামাজিকতার মিলনে আমরা দেবীকে আহ্বান জানাই।
+  </div></div>
+
+  <h2 class="sub-title">কমিটি ও সদস্য</h2>
+  <div class="cards two-col">
+    <div class="card motion-fade-up"><div class="card-body">সভাপতি: খোকন ঘরামী</div></div>
+    <div class="card motion-fade-up"><div class="card-body">সহ-সভাপতি: সহাদেব সিকদার</div></div>
+    <div class="card motion-fade-up"><div class="card-body">সাধারণ সম্পাদক: তাপস ঘরামী</div></div>
+    <div class="card motion-fade-up"><div class="card-body">যুগ্ম-সাধারণ সম্পাদক: বিনয় মজুমদার</div></div>
+    <div class="card motion-fade-up"><div class="card-body">কোষাধ্যক্ষ: সুজয় সিকদার</div></div>
+    <div class="card motion-fade-up"><div class="card-body">সংগঠনিক সম্পাদক: অনুপ হালদার</div></div>
+    <div class="card motion-fade-up"><div class="card-body">সহ-সংগঠনিক সম্পাদক: বিপ্লব হালদার</div></div>
+    <div class="card motion-fade-up"><div class="card-body">মন্দির প্রতিরক্ষা সম্পাদক: পুলক হালদার</div></div>
+  </div>
+</section>
+
+  
+<section class="route container section" data-route="/events" hidden>
+  <h1 class="page-title">ইভেন্ট সূচি ২০২৫</h1>
+  <p class="notice motion-fade-up">⚠️ সময়সূচি :- পঞ্জিকা/ব্রাহ্মন এবং কমিটির সিদ্ধান্ত অনুযায়ী।</p>
+  <ul class="events timeline">
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-09-21">21 Sep 2025</time></div>
+      <div class="event-body"><h3>মহালয়া</h3><p>চণ্ডীপাঠ ও দেবী বন্দনা।</p><p><strong>সময়:</strong> 04:47 AM</p></div>
+    </li>
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-09-20">27 Sep 2025</time></div>
+      <div class="event-body"><h3>পঞ্চমী</h3><p>১০ আশ্বিন ১৪৩২ বঙ্গাব্দ (বাংলাদেশ ১২ আশ্বিন), ২৭ সেপ্টেম্বর ২০২৫ইং, শনিবার: পঞ্চমী: পূর্বাহ্ন দিবা ৯/১৮/০ পর্যন্ত। সায়ংকালে শ্রীশ্রী শারদীয়া দুর্গাদেবীর বোধন। </p><p><strong>সময়:</strong> 09:18:00 AM</p></div>
+    </li>    
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-09-28">28 Sep 2025</time></div>
+      <div class="event-body"><h3>ষষ্ঠী</h3><p>১১ আশ্বিন ১৪৩২ বঙ্গাব্দ (বাংলাদেশ ১৩ আশ্বিন), ২৮ সেপ্টেম্বর ২০২৫ইং, রবিবার: ষষ্ঠী দিবা ৯/৫৮/১৪ মধ্যে শ্রীশ্রী শারদীয়া দুর্গাদেবীর ষষ্ঠ্যাদি কল্পারম্ব ও ষষ্ঠী বিহিত পূজা প্রশস্তা । সায়ংকালে দেবীর আমন্ত্রণ ও অধিবাস ।</p><p><strong>সময়:</strong> 09:58:14 AM</p></div>
+    </li>
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-09-29">29 Sep 2025</time></div>
+      <div class="event-body"><h3>সপ্তমী</h3><p>১২ আশ্বিন ১৪৩২ বঙ্গাব্দ (বাংলাদেশ ১৪ আশ্বিন), ২৯ সেপ্টেম্বর ২০২৫ইং, সোমবার সপ্তমী পূর্বাহ্ন মধ্যে দ্ব্যাত্মক চরলগ্নে ও চরণবাংশে (কিন্তু কালবেলানুরোধে দিবা ৭/২৯/১৭ মধ্যে পুনঃ দিবা ৮/৫৮/৩৫ গতে পূর্বাহ্ন মধ্যে) শ্রীশ্রী শারদীয়া দুর্গাদেবীর নবপত্রিকা প্রবেশ, স্থাপন, সপ্তাম্যাদি কল্পারম্ভ ও সপ্তমী বিহিত পূজা প্রশস্তা। দেবীর গজে আগমন। ফলম্-শস্যপূর্ণা বসুন্ধরা। রাত্রি ১১/৩৩/১২ গতে ১২/২১/১২ মধ্যে শ্রীশ্রী দেবীর অর্ধরাত্র বিহিত পূজা। বিশেষ আরতি প্রতিযোগীতা ।
+।</p><p><strong>সময়:</strong> 07:29:17</p></div>
+    </li>
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-09-30">30 Sep 2025</time></div>
+      <div class="event-body"><h3>অষ্টমী</h3><p>১৩ আশ্বিন ১৪৩২ বঙ্গাব্দ (বাংলাদেশ ১৫ আশ্বিন), ৩০ সেপ্টেম্বর ২০২৫ইং, মঙ্গলবার অষ্টমী দিবা ২/১৪/৩৩ পর্যন্ত। পূর্বাহ্ন মধ্যে শ্রীশ্রী শারদীয়া দুর্গাদেবীর মহাষ্টম্যাদি কল্পারম্ভ, কেবল মহাষ্টমী কল্পারম্ভ ও মহাষ্টমী বিহিত পূজা প্রশস্তা। পূর্বাহ্ন মধ্যে বীরাষ্টমীব্রত ও মহাষ্টমীব্রতের পারণ। দিবা ১/৫০/৩১ গতে সন্ধিপূজারম্ভ। দিবা ২/৩৮/৩৩ মধ্যে সন্ধিপূজা সমাপন। বলিদান ও কুমারী পূজা ।
+</p><p><strong>সময়:</strong> 10:00</p></div>
+    </li>
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-10-01">1 Oct 2025</time></div>
+      <div class="event-body"><h3>নবমী</h3><p>১৪ আশ্বিন ১৪৩২ বঙ্গাব্দ (বাংলাদেশ ১৬ আশ্বিন), ১ অক্টোবর ২০২৫ইং, বুধবার নবমী দিবা ৮/৫৮/৩৬ মধ্যে শ্রীশ্রী শারদীয়া দুর্গাদেবীর কেবল মহানবমী কল্পারম্ভ ও মহানবমী বিহিত পূজা প্রশস্তা এবং দেবীর নবরাত্রিক ব্রত সমাপ্ত। পূর্বাহ্ন মধ্যে বীরাষ্টমীব্রত ও মহাষ্টমীব্রতের পারণ। চন্ডি পাঠ ও মনোজ্ঞ সাংস্কৃতিক অনুষ্ঠান
+।</p><p><strong>সময়:</strong> 10:00</p></div>
+    </li>
+    <li class="event motion-fade-up">
+      <div class="event-date"><time datetime="2025-10-02">2 Oct 2025</time></div>
+      <div class="event-body"><h3>বিজয়া দশমী</h3><p>১৫ আশ্বিন ১৪৩২ বঙ্গাব্দ (বাংলাদেশ ১৭ আশ্বিন), ২ অক্টোবর, ২০২৫ইং, বৃহস্পতিবার দশমী দিবা ৩/২৪/৫৩ পর্যন্ত। পূর্বাহ্ন মধ্যে দ্ব্যাত্মক চরলগ্নে, চরণবাংশে শ্রীশ্রী শারদীয় দুর্গা দেবীর দশমী বিহিত পূজা সমাপনান্তে বিসর্জন।</p><p><strong>সময়:</strong> 15:30</p></div>
+    </li>
+  </ul>
+   <div class="card motion-fade-up"><div class="card-body1">© প্রতিদিন সন্ধ্যায় আরতী প্রতিযোগিতা ও পুজা শেষে প্রসাদ বিতরণ।</div></div>
+</section>
+
+  
+<section class="route container section" data-route="/gallery" hidden>
+  <h1 class="page-title">ফটো গ্যালারি</h1>
+  <div class="gallery">
+<a class="gallery-item motion-fade-up" href="assets/gallery-1.jpg"><img src="assets/gallery-1.svg" alt="গ্যালারি ছবি 1" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-2.svg"><img src="assets/gallery-2.svg" alt="গ্যালারি ছবি 2" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-3.svg"><img src="assets/gallery-3.svg" alt="গ্যালারি ছবি 3" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-4.svg"><img src="assets/gallery-4.svg" alt="গ্যালারি ছবি 4" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-5.svg"><img src="assets/gallery-5.svg" alt="গ্যালারি ছবি 5" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-6.svg"><img src="assets/gallery-6.svg" alt="গ্যালারি ছবি 6" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-7.svg"><img src="assets/gallery-7.svg" alt="গ্যালারি ছবি 7" loading="lazy" width="600" height="400"></a>
+<a class="gallery-item motion-fade-up" href="assets/gallery-8.svg"><img src="assets/gallery-8.svg" alt="গ্যালারি ছবি 8" loading="lazy" width="600" height="400"></a>
+  </div>
+  <p class="muted">টিপ: ছবিতে ক্লিক করলে লাইটবক্সে বড় আকারে দেখবেন।</p>
+</section>
+
+  
+<section class="route container section" data-route="/donate" hidden>
+  <h1 class="page-title">ডোনেশন</h1>
+  <div data-tabs>
+    <div class="tab-row">
+      <button class="btn" data-tab="bkash">bKash</button>
+      <button class="btn" data-tab="nagad">Nagad</button>
+    </div>
+    <div class="card"><div class="card-body">
+      <div data-pane="bkash">
+        <h2>bKash নম্বর: 01XXXXXXXXX</h2>
+        <p class="muted">মার্চেন্ট/পার্সোনাল—যেটি ব্যবহার করেন সেটি লিখুন</p>
+        <div class="split">
+          <div class="card"><div class="card-body">QR (প্লেসহোল্ডার)</div></div>
+          <div class="muted">ট্রান্সফারের সময় reference-এ আপনার নাম দিন।</div>
+        </div>
+      </div>
+      <div data-pane="nagad" hidden>
+        <h2>Nagad নম্বর: 01XXXXXXXXX</h2>
+        <div class="card"><div class="card-body">QR (প্লেসহোল্ডার)</div></div>
+      </div>
+    </div></div>
+  </div>
+  <p class="muted">দ্রষ্টব্য: অনলাইন পেমেন্ট সক্ষম করতে প্রতিষ্ঠান/ক্লাবের নামে KYC সম্পন্ন করতে হবে।</p>
+</section>
+
+  
+<section class="route container section" data-route="/contact" hidden>
+  <h1 class="page-title">যোগাযোগ</h1>
+  <div class="card motion-fade-up"><div class="card-body">
+    <form action="#" method="post">
+      <div class="grid-2">
+        <div><label for="name">নাম</label><input id="name" name="name" required></div>
+        <div><label for="phone">মোবাইল</label><input id="phone" name="phone" required></div>
+      </div>
+      <div class="mt"><label for="email">ইমেল</label><input id="email" type="email" name="email"></div>
+      <div class="mt"><label for="msg">বার্তা</label><textarea id="msg" name="msg" rows="4" required></textarea></div>
+      <div class="mt"><button class="btn btn-primary" type="submit">পাঠান</button></div>
+    </form>
+  </div></div>
+
+  <h2 class="sub-title">আমাদের অবস্থান</h2>
+  <div class="card motion-fade-up"><div class="card-body">
+    <iframe title="Google Map placeholder" src="https://maps.google.com/maps?q=Dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="320" style="border:0;border-radius:12px" loading="lazy"></iframe>
+  </div></div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>যোগাযোগ</h3>
+      <p>ফোন: <a href="tel:+8801608420443">+8801608-420443</a><br>ইমেল: <a href="mailto:hello@yourpuja2025.example.com">hello@yourpuja2025.example.com</a></p>
+      <p>ঠিকানা: বরিশাল, পিরোজপুর, নাজিরপুর, ঘোষকাঠী (ট্যেকনিক্যাল কলেজ সংরগ্ন) ।  </p>
+    </div>
+    <div>
+      <h3>দ্রুত লিংক</h3>
+      <ul class="footer-links">
+        <li><a data-link href="#/events">সূচি</a></li>
+        <li><a data-link href="#/gallery">গ্যালারি</a></li>
+        <li><a data-link href="#/donate">ডোনেট করুন</a></li>
+        <li><a data-link href="#/contact">যোগাযোগ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>সোশ্যাল</h3>
+      <p><a href="#" aria-label="Facebook">Facebook</a> 
+         <a href="#" aria-label="Instagram">Instagram</a> 
+          <a href="#" aria-label="YouTube">YouTube</a></p>
+    </div>
+  </div>
+  <div class="container legal">
+    <p>© 2025 বরিশাল, পিরোজপুর, নাজিরপুর, ঘোষকাঠী (ট্যেকনিক্যাল কলেজ সংরগ্ন) দুর্গোৎসব কমিটি. সর্বস্বত্ব সংরক্ষিত।</p>
+  </div>
+</footer>
+
+</body>
+</html>
